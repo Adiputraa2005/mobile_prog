@@ -4,12 +4,12 @@ plugins {
 
 android {
     namespace = "id.ac.binus.project_mobileprog"
-    compileSdk = 35
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "id.ac.binus.project_mobileprog"
         minSdk = 24
-        targetSdk = 35
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 

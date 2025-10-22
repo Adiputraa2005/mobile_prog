@@ -12,8 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Project_mobileProg"
         tools:targetApi="31">
+        <activity android:name=".home_activity"/>
+        <activity android:name=".register_activity"/>
+
         <activity
-            android:name=".login_page"
+            android:name=".login_activity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
