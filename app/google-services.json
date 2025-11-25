@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "242656591089",
+    "project_id": "project-mobile-76528",
+    "storage_bucket": "project-mobile-76528.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:242656591089:android:9ab358a1db043b31eb7d50",
+        "android_client_info": {
+          "package_name": "id.ac.binus.project_mobileprog"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrMR3S1rFYIvKTGeCQpBdwd_Ea3Q3jFHU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

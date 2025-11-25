@@ -18,7 +18,10 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#80000000" />
+        android:background="#80000000"
+        android:clickable="false"
+        android:focusable="false"
+        />
 
     <!-- Login Card -->
     <LinearLayout
@@ -62,9 +65,14 @@
             android:hint="Email"
             android:padding="10dp"
             android:textColorHint="#999"
-            android:textColor="@android:color/white"
+            android:textColor="@color/black"
             android:inputType="textEmailAddress"
-            android:layout_marginBottom="12dp" />
+            android:layout_marginBottom="12dp"
+            android:clickable="true"
+            android:enabled="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            />
 
         <!-- Password Field -->
         <EditText
@@ -77,9 +85,12 @@
             android:hint="Password"
             android:padding="10dp"
             android:textColorHint="#999"
-            android:textColor="@android:color/white"
+            android:textColor="@color/black"
             android:inputType="textPassword"
-            android:layout_marginBottom="10dp" />
+            android:layout_marginBottom="10dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            />
 
         <!-- Remember & Forgot Password -->
         <LinearLayout

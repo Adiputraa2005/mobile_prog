@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/profile_page"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+
+    >
+
+    <!-- Tombol Back -->
+    <ImageButton
+        android:id="@+id/back_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/outline_arrow_circle_left_24"
+        android:contentDescription="Back to main page"
+        />
+
+    <!-- Foto Profil -->
+    <ImageView
+        android:id="@+id/profile_picture"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/profile_picture" />
+
+    <!-- =================== NAMA =================== -->
+    <ImageView
+        android:id="@+id/name_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/profile_picture"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/outline_contacts_24" />
+
+    <TextView
+        android:id="@+id/txtNama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:layout_toRightOf="@id/name_icon"
+        android:layout_below="@id/profile_picture"
+        android:layout_marginTop="55dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtNama2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="John Doe"
+        android:layout_below="@id/txtNama"
+        android:layout_toRightOf="@id/name_icon"
+        android:layout_marginLeft="30dp"
+        android:textSize="20sp" />
+
+    <!-- =================== GENDER =================== -->
+    <ImageView
+        android:id="@+id/gender_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/txtNama2"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/gender_24" />
+
+    <TextView
+        android:id="@+id/txtGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender"
+        android:layout_toRightOf="@id/gender_icon"
+        android:layout_below="@id/txtNama2"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtGender2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Male"
+        android:layout_below="@id/txtGender"
+        android:layout_toRightOf="@id/gender_icon"
+        android:layout_marginLeft="30dp"
+        android:textSize="20sp" />
+
+    <!-- =================== LOCATION =================== -->
+    <ImageView
+        android:id="@+id/location_icon"
+        android:layout_width="40dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/txtGender2"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/outline_location_on_24" />
+
+    <TextView
+        android:id="@+id/txtLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location"
+        android:layout_toRightOf="@id/location_icon"
+        android:layout_below="@id/txtGender2"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtLocation2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DKI Jakarta"
+        android:layout_below="@id/txtLocation"
+        android:layout_toRightOf="@id/location_icon"
+        android:layout_marginLeft="30dp"
+        android:textSize="20sp" />
+
+    <!-- =================== PHONE =================== -->
+    <ImageView
+        android:id="@+id/phone_icon"
+        android:layout_width="40dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/txtLocation2"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/outline_call_24" />
+
+    <TextView
+        android:id="@+id/txtPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone"
+        android:layout_toRightOf="@id/phone_icon"
+        android:layout_below="@id/txtLocation2"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtPhone2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="081234567890"
+        android:layout_below="@id/txtPhone"
+        android:layout_toRightOf="@id/phone_icon"
+        android:layout_marginLeft="30dp"
+        android:textSize="20sp" />
+
+    <!-- =================== EMAIL =================== -->
+    <ImageView
+        android:id="@+id/mail_icon"
+        android:layout_width="40dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/txtPhone2"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/outline_mail_24" />
+
+    <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:layout_toRightOf="@id/mail_icon"
+        android:layout_below="@id/txtPhone2"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtEmail2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="user123@gmail.com"
+        android:layout_below="@id/txtEmail"
+        android:layout_toRightOf="@id/mail_icon"
+        android:layout_marginLeft="30dp"
+        android:textSize="20sp" />
+
+</RelativeLayout>
