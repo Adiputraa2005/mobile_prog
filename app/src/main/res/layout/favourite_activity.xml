@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp">
+
+    <ImageButton
+        android:id="@+id/back_btn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/outline_arrow_circle_left_24"
+        android:layout_marginTop="3dp"
+        android:contentDescription="back"
+        />
+    <TextView
+        android:id="@+id/titleFav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Favourite Houses"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"/>
+
+    <ListView
+        android:id="@+id/listrumah"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="12dp"/>
+
+</LinearLayout>

@@ -8,19 +8,16 @@
     android:layout_height="match_parent"
     tools:context=".main_activity">
 
-    <!-- Scroll agar seluruh konten bisa di-scroll -->
-    <ScrollView
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:fillViewport="true">
+        android:layout_weight="1">
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <!-- Bagian Hero -->
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="250dp">
@@ -32,13 +29,11 @@
                     android:scaleType="centerCrop"
                     android:src="@drawable/house3" />
 
-                <!-- Overlay gelap -->
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#80000000" />
 
-                <!-- Search bar -->
                 <LinearLayout
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
@@ -69,7 +64,6 @@
                         android:inputType="text" />
                 </LinearLayout>
 
-                <!-- Promo banner -->
                 <TextView
                     android:id="@+id/tvPromo"
                     android:text="Promo hanya berlaku kurang dari 30 hari!"
@@ -91,7 +85,7 @@
                 android:layout_height="match_parent" />
 
         </LinearLayout>
-    </ScrollView>
+    </FrameLayout>
 
     <!-- Bottom Navigation -->
     <com.google.android.material.bottomnavigation.BottomNavigationView

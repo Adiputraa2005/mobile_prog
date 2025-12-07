@@ -21,22 +21,40 @@
             android:layout_marginBottom="16dp">
 
             <ImageView
-                android:src="@drawable/house1"
-                android:layout_width="match_parent"
-                android:layout_height="140dp"
-                android:scaleType="centerCrop"
-                app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Medium"
-                android:id="@+id/gambar_rumah"
+                    android:src="@drawable/house1"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Medium"
+                    android:id="@+id/gambar_rumah"
                 />
 
-            <TextView
-                android:text="Rumah Minimalis"
-                android:textStyle="bold"
-                android:paddingTop="8dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/txttipe_rumah"
-                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <ImageButton
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/baseline_add_box_24"
+                    android:id="@+id/favourite_button"
+                    android:background="@color/white"
+                    android:layout_alignParentEnd="true"
+                    android:contentDescription="favorit"
+                    />
+
+                <TextView
+                    android:text="Rumah Minimalis"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txttipe_rumah"
+                    android:layout_marginTop="15dp"
+                    />
+
+            </RelativeLayout>
+
+
             <TextView
                 android:text="puri residence resort 1"
                 android:textStyle="bold"
@@ -73,6 +91,7 @@
                 android:id="@+id/txtlokasi_rumah"
                 />
 
+
             <LinearLayout
                 android:orientation="horizontal"
                 android:gravity="center"
@@ -86,7 +105,9 @@
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="4dp" />
+                    android:layout_marginEnd="4dp"
+                    android:backgroundTint="@color/blue"
+                    />
 
                 <Button
                     android:id="@+id/btn_Agent1"
@@ -94,7 +115,9 @@
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp" />
+                    android:layout_marginStart="4dp"
+                    android:backgroundTint="@color/blue"
+                    />
             </LinearLayout>
         </LinearLayout>
 

@@ -1,8 +1,316 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#F8F9FA"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".Brosur_activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:paddingTop="10dp"
+        android:paddingBottom="24dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:elevation="0dp"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/outline_arrow_circle_left_24"
+            android:layout_marginTop="3dp"
+            android:contentDescription="back"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E-Brosur"
+            android:textSize="24sp"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Katalog eksklusif dan daftar harga"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"
+            android:textColor="#888888" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="20dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:baselineAligned="false"
+                android:layout_marginBottom="16dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="@android:color/white">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:src="@drawable/house3"
+                            android:scaleType="centerCrop"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"/>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:padding="12dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:text="RESIDENTIAL"
+                                android:textSize="10sp"
+                                android:letterSpacing="0.1"
+                                android:textStyle="bold"
+                                android:textColor="#BDBDBD"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:text="Cluster A"
+                                android:textStyle="bold"
+                                android:textColor="#333333"
+                                android:textSize="16sp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginBottom="8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:text="Mulai Rp 800jt"
+                                    android:textSize="11sp"
+                                    android:textColor="#666666"
+                                    android:layout_weight="1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"/>
+
+                                <Button
+                                    android:text="Download"
+                                    android:textSize="10sp"
+                                    android:textColor="@android:color/white"
+                                    android:backgroundTint="@android:color/holo_red_dark"
+                                    android:minHeight="0dp"
+                                    android:minWidth="0dp"
+                                    android:paddingTop="6dp"
+                                    android:paddingBottom="6dp"
+                                    android:paddingStart="12dp"
+                                    android:paddingEnd="12dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="48dp"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="@android:color/white">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:src="@drawable/house3"
+                            android:scaleType="centerCrop"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"/>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:padding="12dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:text="RESIDENTIAL"
+                                android:textSize="10sp"
+                                android:letterSpacing="0.1"
+                                android:textStyle="bold"
+                                android:textColor="#BDBDBD"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:text="Cluster B"
+                                android:textStyle="bold"
+                                android:textColor="#333333"
+                                android:textSize="16sp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginBottom="8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:text="Type 45/90"
+                                    android:textSize="11sp"
+                                    android:textColor="#666666"
+                                    android:layout_weight="1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"/>
+
+                                <Button
+                                    android:text="Download"
+                                    android:textSize="10sp"
+                                    android:textColor="@android:color/white"
+                                    android:backgroundTint="@android:color/holo_red_dark"
+                                    android:minHeight="0dp"
+                                    android:minWidth="0dp"
+                                    android:paddingTop="6dp"
+                                    android:paddingBottom="6dp"
+                                    android:paddingStart="12dp"
+                                    android:paddingEnd="12dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="48dp"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
 
 
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@android:color/white">
 
-</RelativeLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/house3"
+                        android:scaleType="centerCrop"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"/>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:padding="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:text="FINANCE"
+                                android:textSize="10sp"
+                                android:letterSpacing="0.1"
+                                android:textStyle="bold"
+                                android:textColor="#BDBDBD"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:text="Pricelist 2025"
+                                android:textStyle="bold"
+                                android:textColor="#333333"
+                                android:textSize="18sp"
+                                android:layout_marginTop="4dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:text="Update Jan 2025"
+                                android:textSize="12sp"
+                                android:textColor="#888888"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                        <Button
+                            android:text="Download PDF"
+                            android:textSize="11sp"
+                            android:textColor="@android:color/white"
+                            android:backgroundTint="@android:color/holo_red_dark"
+                            android:minHeight="0dp"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:paddingStart="20dp"
+                            android:paddingEnd="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_top_rounded"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_nav_menu" />
+
+</LinearLayout>

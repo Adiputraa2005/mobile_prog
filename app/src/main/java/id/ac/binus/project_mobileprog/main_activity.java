@@ -34,6 +34,7 @@ public class main_activity extends AppCompatActivity {
         ArrayList<Rumah> listRumah = new ArrayList<>();
         listRumah.add(new Rumah(R.drawable.house1, "Rumah Minimalis", "puri residence resort", "Rp 1- 2 M", "Tipe 10 x 20 Standard", "puri utara"));
         listRumah.add(new Rumah(R.drawable.house2, "Rumah luxury", "Serpong heritage 1", "Rp 1- 3 M", "Tipe 15 x 20 Standard", "Serpong selatan"));
+        listRumah.add(new Rumah(R.drawable.house3, "Rumah tusuk sate", "Pantai indah kapuk","Rp 3-5 M", "tipe 1 x 1", "jakarta utara"));
 
         listrumah_adapter adapter = new listrumah_adapter(this, R.layout.list_item_rumah, listRumah);
         listView.setAdapter(adapter);
@@ -47,6 +48,7 @@ public class main_activity extends AppCompatActivity {
             if (id == R.id.nav_home) return go(main_activity.class);
             if (id == R.id.nav_profile) return go(profil_activity.class);
             if(id == R.id.nav_message) return go(message_activity.class);
+            if(id == R.id.nav_favorite) return go(favourit_activity.class);
 
 
             return false;

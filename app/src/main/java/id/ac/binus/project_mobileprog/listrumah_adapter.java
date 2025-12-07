@@ -9,13 +9,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class listrumah_adapter extends ArrayAdapter<Rumah> {
     private Context context;
@@ -30,13 +33,7 @@ public class listrumah_adapter extends ArrayAdapter<Rumah> {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        int image = getItem(position).getGambar();
-        String namaRumah = getItem(position).getNama_rumah();
-        String hargaRumah = getItem(position).getHarga_rumah();
-        String lokasiRumah = getItem(position).getLokasi_rumah();
-        String tipeRumah = getItem(position).getTipe_rumah();
-        String ukuranRumah = getItem(position).getUkuran_rumah();
-
+        Rumah rumah = getItem(position);
         LayoutInflater inflater = LayoutInflater.from(context);
         convertView = inflater.inflate(resource, parent, false);
 
@@ -46,15 +43,17 @@ public class listrumah_adapter extends ArrayAdapter<Rumah> {
         TextView textView2 = (TextView) convertView.findViewById(R.id.txtHarga_rumah);
         TextView textView3 = (TextView) convertView.findViewById(R.id.txtUkuran_rumah);
         TextView textView4 = (TextView) convertView.findViewById(R.id.txtlokasi_rumah);
+
         Button btnAgent = convertView.findViewById(R.id.btn_Agent1);
         Button btnBrosur = convertView.findViewById(R.id.btn_Brosur1);
+        ImageButton btnFavorite = convertView.findViewById(R.id.favourite_button);
 
-        imageView.setImageResource(image);
-        textView.setText(tipeRumah);
-        textView1.setText(namaRumah);
-        textView2.setText(hargaRumah);
-        textView3.setText(ukuranRumah);
-        textView4.setText(lokasiRumah);
+        imageView.setImageResource(rumah.getGambar());
+        textView.setText(rumah.getTipe_rumah());
+        textView1.setText(rumah.getNama_rumah());
+        textView2.setText(rumah.getHarga_rumah());
+        textView3.setText(rumah.getUkuran_rumah());
+        textView4.setText(rumah.getLokasi_rumah());
 
         btnBrosur.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,6 +70,12 @@ public class listrumah_adapter extends ArrayAdapter<Rumah> {
             }
         });
 
+        btnFavorite.setOnClickListener(v -> {
+            List<Rumah> favorites = favourite_helper.getFavorites(context);
+            favorites.add(rumah);
+            favourite_helper.saveFavorites(context, favorites);
+            Toast.makeText(context, "Ditambahkan ke Favorit", Toast.LENGTH_SHORT).show();
+        });
 
         return convertView;
     }

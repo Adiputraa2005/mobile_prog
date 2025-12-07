@@ -24,6 +24,12 @@ public class message_activity extends AppCompatActivity {
         Intent intent = new Intent(message_activity.this, main_activity.class);
         startActivity(intent);
         finish();
-    });
+        });
+    btn_make_appointment = findViewById(R.id.btn_make_appointment);
+    btn_make_appointment.setOnClickListener(view1 -> {
+        Intent intent1 = new Intent(message_activity.this, chat_activity_layout.class);
+        startActivity(intent1);
+        finish();
+        });
     }
 }

@@ -36,7 +36,9 @@
         <activity android:name=".message_activity"/>
         <activity android:name=".profil_activity"/>
         <activity android:name=".Agent_activity"/>
-
+        <activity android:name=".Brosur_activity"/>
+        <activity android:name=".chat_activity_layout"/>
+        <activity android:name=".favourit_activity"/>
     </application>
 
 </manifest>
