@@ -2,6 +2,7 @@ package id.ac.binus.project_mobileprog;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.database.sqlite.SQLiteDatabase;
 import android.widget.ArrayAdapter;
 
 import com.google.common.reflect.TypeToken;
@@ -34,5 +35,16 @@ public class favourite_helper {
 
         if (json.isEmpty()) return new ArrayList<>();
         return gson.fromJson(json, type);
+    }
+    public static void removeFavourite(Context context, int rumahId){
+        List<Rumah> favList = getFavorites(context);
+
+        for(int i = 0; i < favList.size(); i++){
+            if(favList.get(i).getId() == rumahId){
+                favList.remove(i);
+                break;
+            }
+        }
+        saveFavorites(context, favList);
     }
 }

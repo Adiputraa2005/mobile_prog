@@ -42,6 +42,15 @@
                     android:layout_alignParentEnd="true"
                     android:contentDescription="favorit"
                     />
+                <ImageButton
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/delete_box"
+                    android:id="@+id/favouriteDEL_button"
+                    android:background="@color/white"
+                    android:contentDescription="favorit"
+                    android:layout_toLeftOf="@id/favourite_button"
+                    />
 
                 <TextView
                     android:text="Rumah Minimalis"

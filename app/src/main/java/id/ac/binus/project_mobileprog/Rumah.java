@@ -3,6 +3,7 @@ package id.ac.binus.project_mobileprog;
 import android.widget.Button;
 
 public class Rumah {
+    private int Id;
     private int gambar;
     private String tipe_rumah;
     private String nama_rumah;
@@ -21,6 +22,9 @@ public class Rumah {
 
     public int getGambar() {
         return gambar;
+    }
+    public int getId(){
+        return Id;
     }
 
     public String getHarga_rumah() {

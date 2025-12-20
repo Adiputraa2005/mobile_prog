@@ -50,7 +50,6 @@ public class main_activity extends AppCompatActivity {
             if(id == R.id.nav_message) return go(message_activity.class);
             if(id == R.id.nav_favorite) return go(favourit_activity.class);
 
-
             return false;
         });
     }

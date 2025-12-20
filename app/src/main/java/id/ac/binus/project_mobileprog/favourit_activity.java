@@ -37,6 +37,16 @@ public class favourit_activity extends AppCompatActivity {
             startActivity(intent);
             finish();
         });
+        listView.setOnItemLongClickListener((parent, view, position, id) -> {
+            Rumah rumah = favlist.get(position);
+
+            favourite_helper.removeFavourite(this, rumah.getId());
+
+            favlist.remove(position);
+            adapter.notifyDataSetChanged();
+
+            return true;
+        });
     }
 
 
