@@ -36,7 +36,7 @@ public class main_activity extends AppCompatActivity {
         listRumah.add(new Rumah(R.drawable.house2, "Rumah luxury", "Serpong heritage 1", "Rp 1- 3 M", "Tipe 15 x 20 Standard", "Serpong selatan"));
         listRumah.add(new Rumah(R.drawable.house3, "Rumah tusuk sate", "Pantai indah kapuk","Rp 3-5 M", "tipe 1 x 1", "jakarta utara"));
 
-        listrumah_adapter adapter = new listrumah_adapter(this, R.layout.list_item_rumah, listRumah);
+        listrumah_adapter adapter = new listrumah_adapter(this, R.layout.list_rumah_mainactivity, listRumah);
         listView.setAdapter(adapter);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);

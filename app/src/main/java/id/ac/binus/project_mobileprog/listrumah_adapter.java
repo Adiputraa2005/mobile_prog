@@ -71,24 +71,29 @@ public class listrumah_adapter extends ArrayAdapter<Rumah> {
             }
         });
 
-        btnFavorite.setOnClickListener(v -> {
-            List<Rumah> favorites = favourite_helper.getFavorites(context);
-            for (Rumah r : favorites) {
-                if (r.getId() == rumah.getId()) {
-                    Toast.makeText(context, "Sudah di favorit", Toast.LENGTH_SHORT).show();
-                    return;
+        if (btnFavorite != null) {
+            btnFavorite.setOnClickListener(v -> {
+                List<Rumah> favorites = favourite_helper.getFavorites(context);
+                for (Rumah r : favorites) {
+                    if (r.getId() == rumah.getId()) {
+                        Toast.makeText(context, "Sudah di favorit", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
                 }
-            }
-            favorites.add(rumah);
-            favourite_helper.saveFavorites(context, favorites);
-            Toast.makeText(context, "Ditambahkan ke Favorit", Toast.LENGTH_SHORT).show();
-        });
-        btnDelete.setOnClickListener(v -> {
-            favourite_helper.removeFavourite(context, rumah.getId());
-            remove(rumah);
-            notifyDataSetChanged();
-            Toast.makeText(context, "Dihapus dari favorit", Toast.LENGTH_SHORT).show();
-        });
+                favorites.add(rumah);
+                favourite_helper.saveFavorites(context, favorites);
+                Toast.makeText(context, "Ditambahkan ke Favorit", Toast.LENGTH_SHORT).show();
+            });
+        }
+
+        if (btnDelete != null) {
+            btnDelete.setOnClickListener(v -> {
+                favourite_helper.removeFavourite(context, rumah.getId());
+                remove(rumah);
+                notifyDataSetChanged();
+                Toast.makeText(context, "Dihapus dari favorit", Toast.LENGTH_SHORT).show();
+            });
+        }
 
         return convertView;
     }
